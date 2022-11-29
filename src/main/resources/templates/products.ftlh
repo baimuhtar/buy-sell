@@ -1,11 +1,19 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>BUYSELL</title>
 </head>
 <body>
-<h1>BUYSELL</h1>
+<h1>BUYSELL | <a href="/login">Войти</a></h1>
 <hr>
+<form action="/logout" method="post">
+    <input type="hidden" name="_csrf" value="${_csrf.token}">
+    <input type="submit" value="Выйти"/>
+</form>
 <h4>Товары со всего Казахстана</h4>
 <form action="/" method="get">
     Поиск по названию объвления: <input type="text" name="title"><br>
@@ -15,7 +23,7 @@
     <div>
         <p><b>${product.title}</b> ${product.price} тенге | <a href="/product/${product.id}">Подробнее...</a></p>
     </div>
-    <#else>
+<#else>
     <h3>Товаров нет</h3>
 </#list>
 <hr>
