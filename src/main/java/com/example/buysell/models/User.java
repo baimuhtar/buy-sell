@@ -39,11 +39,17 @@ public class User implements UserDetails {
     private List<Product> products = new ArrayList<>();
     private LocalDateTime dateOfCreation;
 
-    private void init(){
+    private void init() {
         dateOfCreation = LocalDateTime.now();
     }
 
+
     //security
+
+    public boolean isAdmin() {
+        return roles.contains(Role.ROLE_ADMIN);
+    }
+
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return roles;
