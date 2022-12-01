@@ -5,7 +5,6 @@ import com.example.buysell.models.Product;
 import com.example.buysell.models.User;
 import com.example.buysell.repositories.ProductRepository;
 import com.example.buysell.repositories.UserRepository;
-import lombok.AllArgsConstructor;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -13,7 +12,6 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
 import java.security.Principal;
-import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -69,7 +67,7 @@ public class ProductService {
 
     }
 
-    public void deleteProduct(Long id) {
+    public void deleteProduct(User userByPrincipal, Long id) {
         productRepository.deleteById(id);
     }
 
