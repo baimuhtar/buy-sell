@@ -19,7 +19,7 @@
                 <div class="input-group mb-3">
                     <input type="number" required class="form-control" id="price" name="price">
                     <div class="input-group-append">
-                        <span class="input-group-text">₽</span>
+                        <span class="input-group-text">тенге</span>
                     </div>
                 </div>
             </div>
@@ -28,9 +28,9 @@
                 <select id="searchCity" required name="city" class="form-control">
                     <option value="">Город не выбран</option>
 
-                    <option value="Москва">Москва</option>
-                    <option value="Красноярск">Красноярск</option>
-                    <option value="Казань">Казань</option>
+                    <option value="Астана">Астана</option>
+                    <option value="Алматы">Алматы</option>
+                    <option value="Караганда">Караганда</option>
 
                 </select>
             </div>
@@ -74,10 +74,10 @@
                         </form>
                     </div>
                     <img src="/images/${product.previewImageId}"
-                         class="card-img-top">
+                         class="card-img-top" alt="">
                     <div class="card-body">
                         <h5 class="card-title">${product.title}</h5>
-                        <p class="card-text">${product.price} ₽</p>
+                        <p class="card-text">${product.price} тенге</p>
                     </div>
                     <div class="card-footer">
                         ${product.city}

@@ -7,9 +7,9 @@
                 <label for="searchCity">Город</label>
                 <select id="searchCity" class="form-control">
                     <option value="">Город не выбран</option>
-                    <option value="Москва">Москва</option>
-                    <option value="Красноярск">Красноярск</option>
-                    <option value="Казань">Казань</option>
+                    <option value="Астана">Астана</option>
+                    <option value="Алматы">Алматы</option>
+                    <option value="Караганда">Караганда</option>
                 </select>
             </div>
             <div class="form-group col-md-10">
@@ -27,10 +27,10 @@
                 <div class="card text-white bg-dark my-3 product">
 
                     <img src="/images/${product.previewImageId}"
-                         class="card-img-top">
+                         class="card-img-top" alt="">
                     <div class="card-body">
                         <h5 class="card-title">${product.title}</h5>
-                        <p class="card-text">${product.price} ₽</p>
+                        <p class="card-text">${product.price} тенге</p>
                     </div>
                     <div class="card-footer">
                         ${product.city}
